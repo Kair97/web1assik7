@@ -1,13 +1,13 @@
 $(document).ready(function() {
   console.log("jQuery is ready!");
 
-  // ===== Part 1: Selectors =====
+  // Part 1:
   $("#title").text("Changed Title using jQuery");
   $(".text").html("<b>Updated paragraph with bold text!</b>");
   $("div").css("color", "blue");
 
-  // ===== Part 2: Effects =====
-  // Task 2: Hide / Show / Toggle
+  // Part 2
+  // Task 2
   $("#hide").click(function() {
     $("#para").hide();
   });
@@ -18,7 +18,7 @@ $(document).ready(function() {
     $("#para").toggle();
   });
 
-  // Task 3: Fade methods
+  // Task 3
   $("#fadeIn").click(function() {
     $("#myImage").fadeIn(1000);
   });
@@ -29,13 +29,13 @@ $(document).ready(function() {
     $("#myImage").fadeToggle(1000);
   });
 
-  // Task 4: Slide methods
+  // Task 4
   $("#slideToggle").click(function() {
     $("#panel").slideToggle("slow");
   });
 
-  // ===== Part 3: DOM Manipulation =====
-  // Task 5: Add & Remove Elements
+  // Part 3
+  // Task 5
   $("#add").click(function() {
     $("#list").append("<li>New Item</li>");
   });
@@ -43,15 +43,15 @@ $(document).ready(function() {
     $("#list li:last").remove();
   });
 
-  // Task 6: Modifying Attributes
+  // Task 6
   $("#changeImg").click(function() {
-    $("#switchImage").attr("src", "https://via.placeholder.com/200/ff0000");
+    $("#switchImage").attr("src", "../assignment7/images/asitu.jpg");
   });
   $("#changeLink").click(function() {
     $("#myLink").attr("href", "https://astanait.edu.kz").text("Go to AITU");
   });
 
-  // Task 7: Form Interaction
+  // Task 7
   $("#nameInput").keyup(function() {
     $("#displayName").text("Name: " + $(this).val());
   });
@@ -59,13 +59,14 @@ $(document).ready(function() {
     $("#displayEmail").text("Email: " + $(this).val());
   });
 
-  // ===== Part 4: Animations =====
-  // Task 8: Basic animation
+  // Part 4
+
+  // Task 8
   $("#animate").click(function() {
     $("#box").animate({ left: '200px', width: '200px', height: '200px' }, 1000);
   });
 
-  // Task 9: Sequential animations
+  // Task 9
   $("#sequence").click(function() {
     $("#box")
       .animate({ left: '200px' }, 800)
@@ -74,7 +75,7 @@ $(document).ready(function() {
       .animate({ left: '0', top: '0', width: '100px', height: '100px' }, 800);
   });
 
-  // Task 10: Combined animation
+  // Task 10
   $("#combo").click(function() {
     $("#box").animate({
       left: '150px',
@@ -84,7 +85,7 @@ $(document).ready(function() {
     }, 1000);
   });
 
-  // ===== Part 5: Mini Project =====
+  // Part 5
   $(".thumb").click(function() {
     let newSrc = $(this).attr("src");
     $("#mainImage").fadeOut(300, function() {
